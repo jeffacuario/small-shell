@@ -1,5 +1,5 @@
 # small-shell
-> Unix shell with built in command line. Interaction that accepts bash commands. Supports background and foreground processes, signal control, variable expansion with parent PID, and input/output redirection.
+Unix shell with built in command line. Interaction that accepts bash commands. Supports background and foreground processes, signal control, variable expansion with parent PID, and input/output redirection.
 
 ![](smallsh.gif)
 
