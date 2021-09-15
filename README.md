@@ -3,25 +3,13 @@
 
 ![](smallsh.gif)
 
-## Installation
+## About the Project
+This was my portfolio project for my Operating Systems I course. Completing this project required using the Unix process API, implementation of custom signal handlers, and I/O redirection.
 
-OS X & Linux:
+The project has custom code written to handle the exit, cd, and status commands. All other commands are forked into a child process and which is replaced using the exec family of functions. Input and output redirection is handled within the smallsh program itself. There are custom signal handlers for SIGINT and SIGTSTP which allow the user terminate children processes running in the foreground and toggle the ability to run processes in the background, respectively.
 
+## Compilation
+The program was tested using the GNU99 standard when compiling. Use the following to compile the program:
 ```sh
-npm install my-crazy-module --save
-```
-
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
+gcc --std=gnu99 -o smallsh main.c
 ```
